@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE83B2C9-B0D5-4A1B-A87B-9A80E2B72E40}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TesisHospital</RootNamespace>
+    <AssemblyName>TesisHospital</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="tessnet2_32, Version=2.0.4.0, Culture=neutral, PublicKeyToken=1550524b5ba07e29, processorArchitecture=x86">
+      <HintPath>..\packages\NuGet.Tessnet2.1.1.1\lib\net45\tessnet2_32.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSetHospital.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetHospital.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ocr.cs" />
+    <Compile Include="Reportes\FrmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmReportes.Designer.cs">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReportePorMedico.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportePorMedico.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reportes\rptEspecialidadesMedicas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEspecialidadesMedicas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="UI_AgregarMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_AgregarMedicamentos.Designer.cs">
+      <DependentUpon>UI_AgregarMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_AlmacenMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_AlmacenMedicamentos.Designer.cs">
+      <DependentUpon>UI_AlmacenMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_BuscarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_BuscarPaciente.Designer.cs">
+      <DependentUpon>UI_BuscarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_BusquedaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_BusquedaProveedor.Designer.cs">
+      <DependentUpon>UI_BusquedaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Citas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Citas.Designer.cs">
+      <DependentUpon>UI_Citas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Patrones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Patrones.Designer.cs">
+      <DependentUpon>UI_Patrones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_RegistroGuias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_RegistroGuias.Designer.cs">
+      <DependentUpon>UI_RegistroGuias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_AreasEspecialidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_AreasEspecialidades.Designer.cs">
+      <DependentUpon>UI_AreasEspecialidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Consultorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Consultorios.Designer.cs">
+      <DependentUpon>UI_Consultorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_HorariosPorMedicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_HorariosPorMedicos.Designer.cs">
+      <DependentUpon>UI_HorariosPorMedicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_HorariosMedicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_HorariosMedicos.Designer.cs">
+      <DependentUpon>UI_HorariosMedicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_RegistroEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_RegistroEspecialidad.Designer.cs">
+      <DependentUpon>UI_RegistroEspecialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_MenuPrincipal.Designer.cs">
+      <DependentUpon>UI_MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI_RegistroMedicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_RegistroMedicos.Designer.cs">
+      <DependentUpon>UI_RegistroMedicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_VentasFarmacia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_VentasFarmacia.Designer.cs">
+      <DependentUpon>UI_VentasFarmacia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VariablesGlobales.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reportes\FrmReportes.resx">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReportePorMedico.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportePorMedico.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptEspecialidadesMedicas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEspecialidadesMedicas.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_AgregarMedicamentos.resx">
+      <DependentUpon>UI_AgregarMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_AlmacenMedicamentos.resx">
+      <DependentUpon>UI_AlmacenMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_BuscarPaciente.resx">
+      <DependentUpon>UI_BuscarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_BusquedaProveedor.resx">
+      <DependentUpon>UI_BusquedaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Citas.resx">
+      <DependentUpon>UI_Citas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Patrones.resx">
+      <DependentUpon>UI_Patrones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_RegistroGuias.resx">
+      <DependentUpon>UI_RegistroGuias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_AreasEspecialidades.resx">
+      <DependentUpon>UI_AreasEspecialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Consultorios.resx">
+      <DependentUpon>UI_Consultorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_HorariosPorMedicos.resx">
+      <DependentUpon>UI_HorariosPorMedicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_HorariosMedicos.resx">
+      <DependentUpon>UI_HorariosMedicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_RegistroEspecialidad.resx">
+      <DependentUpon>UI_RegistroEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_MenuPrincipal.resx">
+      <DependentUpon>UI_MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Content\tessdata\eng.DangAmbigs" />
+    <Content Include="Content\tessdata\eng.freq-dawg" />
+    <Content Include="Content\tessdata\eng.inttemp" />
+    <Content Include="Content\tessdata\eng.normproto" />
+    <Content Include="Content\tessdata\eng.pffmtable" />
+    <Content Include="Content\tessdata\eng.unicharset" />
+    <Content Include="Content\tessdata\eng.user-words" />
+    <Content Include="Content\tessdata\eng.word-dawg" />
+    <EmbeddedResource Include="UI_RegistroMedicos.resx">
+      <DependentUpon>UI_RegistroMedicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_VentasFarmacia.resx">
+      <DependentUpon>UI_VentasFarmacia.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSetHospital.xsc">
+      <DependentUpon>DataSetHospital.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetHospital.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetHospital.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetHospital.xss">
+      <DependentUpon>DataSetHospital.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Iconos\especialidadesMedicas.png" />
+    <Content Include="Iconos\especialidadesMedicas1.png" />
+    <Content Include="Iconos\especialidadesMedicas2.png" />
+    <Content Include="Iconos\guardar.png" />
+    <Content Include="Iconos\hospital.png" />
+    <Content Include="Iconos\hospitalIco.ico" />
+    <Content Include="Iconos\Reportes.png" />
+    <Content Include="Reportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{a68bde04-edc8-4eb2-a8f0-0e15cb8ebcac}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EL\EL.csproj">
+      <Project>{dbb3640a-ffac-4cb2-9fa5-c9704b8f4cae}</Project>
+      <Name>EL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MSBuild.NugetContentRestore.0.1.6\build\net40\MSBuild.NugetContentRestore.targets" Condition="Exists('..\packages\MSBuild.NugetContentRestore.0.1.6\build\net40\MSBuild.NugetContentRestore.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSBuild.NugetContentRestore.0.1.6\build\net40\MSBuild.NugetContentRestore.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.NugetContentRestore.0.1.6\build\net40\MSBuild.NugetContentRestore.targets'))" />
+  </Target>
+  <Target Name="BeforeBuild">
+    <NugetContentRestoreTask SolutionDir="$(SolutionDir)" ProjectDir="$(ProjectDir)" />
+  </Target>
+</Project>

@@ -1,0 +1,5 @@
+C:\Users\edins\source\repos\TesisHospital\EL\bin\Debug\EL.dll
+C:\Users\edins\source\repos\TesisHospital\EL\bin\Debug\EL.pdb
+C:\Users\edins\source\repos\TesisHospital\EL\obj\Debug\EL.csproj.CoreCompileInputs.cache
+C:\Users\edins\source\repos\TesisHospital\EL\obj\Debug\EL.dll
+C:\Users\edins\source\repos\TesisHospital\EL\obj\Debug\EL.pdb
