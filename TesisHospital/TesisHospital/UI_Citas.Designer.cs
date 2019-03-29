@@ -29,19 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UI_Citas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tspGuardarCitas = new System.Windows.Forms.ToolStripButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnlogoInicio = new System.Windows.Forms.PictureBox();
             this.cbxMedico = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,7 +60,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnlogoInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -106,7 +104,6 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnlogoInicio);
             this.panel1.Controls.Add(this.cbxMedico);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
@@ -117,18 +114,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 515);
             this.panel1.TabIndex = 12;
-            // 
-            // btnlogoInicio
-            // 
-            this.btnlogoInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnlogoInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnlogoInicio.Image")));
-            this.btnlogoInicio.Location = new System.Drawing.Point(1, 438);
-            this.btnlogoInicio.Margin = new System.Windows.Forms.Padding(0);
-            this.btnlogoInicio.Name = "btnlogoInicio";
-            this.btnlogoInicio.Size = new System.Drawing.Size(250, 73);
-            this.btnlogoInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnlogoInicio.TabIndex = 17;
-            this.btnlogoInicio.TabStop = false;
             // 
             // cbxMedico
             // 
@@ -191,71 +176,77 @@
             // dgvCitas
             // 
             this.dgvCitas.AllowUserToAddRows = false;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
-            this.dgvCitas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.dgvCitas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCitas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.horaCita,
             this.pacienteCita,
             this.estadoCita,
             this.eliminarCita});
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Bahnschrift Light", 9F);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCitas.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift Light", 9F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCitas.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCitas.Location = new System.Drawing.Point(270, 85);
             this.dgvCitas.Name = "dgvCitas";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            this.dgvCitas.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvCitas.RowHeadersVisible = false;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
-            this.dgvCitas.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.dgvCitas.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvCitas.Size = new System.Drawing.Size(676, 481);
             this.dgvCitas.TabIndex = 13;
+            this.dgvCitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCitas_CellClick);
+            this.dgvCitas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCitas_CellFormatting);
             // 
             // horaCita
             // 
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
-            this.horaCita.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.horaCita.DefaultCellStyle = dataGridViewCellStyle3;
             this.horaCita.Frozen = true;
             this.horaCita.HeaderText = "Hora";
             this.horaCita.Name = "horaCita";
+            this.horaCita.ReadOnly = true;
             // 
             // pacienteCita
             // 
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
-            this.pacienteCita.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.pacienteCita.DefaultCellStyle = dataGridViewCellStyle4;
             this.pacienteCita.Frozen = true;
             this.pacienteCita.HeaderText = "Paciente";
             this.pacienteCita.Name = "pacienteCita";
+            this.pacienteCita.ReadOnly = true;
             this.pacienteCita.Width = 300;
             // 
             // estadoCita
             // 
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
-            this.estadoCita.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.estadoCita.DefaultCellStyle = dataGridViewCellStyle5;
             this.estadoCita.Frozen = true;
             this.estadoCita.HeaderText = "Estado";
             this.estadoCita.Name = "estadoCita";
+            this.estadoCita.ReadOnly = true;
             this.estadoCita.Width = 150;
             // 
             // eliminarCita
@@ -264,6 +255,7 @@
             this.eliminarCita.HeaderText = "Eliminar";
             this.eliminarCita.Image = ((System.Drawing.Image)(resources.GetObject("eliminarCita.Image")));
             this.eliminarCita.Name = "eliminarCita";
+            this.eliminarCita.ReadOnly = true;
             this.eliminarCita.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.eliminarCita.Width = 60;
             // 
@@ -368,7 +360,6 @@
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnlogoInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -388,7 +379,6 @@
         private System.Windows.Forms.ComboBox cbxMedico;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvCitas;
-        private System.Windows.Forms.PictureBox btnlogoInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn horaCita;
         private System.Windows.Forms.DataGridViewTextBoxColumn pacienteCita;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoCita;

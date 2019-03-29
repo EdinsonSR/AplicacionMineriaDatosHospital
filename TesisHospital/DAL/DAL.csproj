@@ -51,6 +51,7 @@
     <Compile Include="GuiaMedicamentosDAL.cs" />
     <Compile Include="MedicamentosDAL.cs" />
     <Compile Include="MedicoDAL.cs" />
+    <Compile Include="patronesDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

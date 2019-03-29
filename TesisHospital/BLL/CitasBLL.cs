@@ -59,5 +59,18 @@ namespace BLL
                 throw ex;
             }
         }
+
+        public Boolean eliminarCita(Cita oCita)
+        {
+            try
+            {
+                Boolean exito = oCitaDal.eliminarCita(oCita);
+                return exito;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

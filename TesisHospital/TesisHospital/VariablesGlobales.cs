@@ -22,7 +22,10 @@ namespace TesisHospital
         public static DateTime fechaCita;
         public static string nombreMedico;
         public static string especialidadMedicoCita;
+        public static string horaCita;
+        public static string apellidoPaternoPaciente;
+        public static string apellidoMaternoPaciente;
+        public static string nombrePaciente;
 
-        
     }
 }

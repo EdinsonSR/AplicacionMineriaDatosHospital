@@ -40,7 +40,7 @@ namespace TesisHospital
         }
         private void btnRegistrarCita_Click(object sender, EventArgs e)
         {
-            UI_RegistrarCita form = new UI_RegistrarCita();
+            
             Cita oCita = new Cita();
             oCita.IdCita = oCita.IdCita;
             oCita.FechaCita = VariablesGlobales.fechaCita;
@@ -56,7 +56,6 @@ namespace TesisHospital
                 MessageBox.Show("Registro Correcto", "Información", MessageBoxButtons.OK);
                 limpiar();
             }
-
         }
 
         private void iconcerrar_Click(object sender, EventArgs e)

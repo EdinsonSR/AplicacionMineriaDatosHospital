@@ -17,7 +17,7 @@ namespace EL
         private string nombrePaciente;
 
         /**/
-
+        private int _cantidadCitas;
 
         public int IdCita { get => _idCita; set => _idCita = value; }
 		public DateTime FechaCita { get => _fechaCita; set => _fechaCita = value; }
@@ -26,5 +26,6 @@ namespace EL
         public string MedicoCita { get => medicoCita; set => medicoCita = value; }
         public string EspecialidadCita { get => especialidadCita; set => especialidadCita = value; }
         public string NombrePaciente { get => nombrePaciente; set => nombrePaciente = value; }
+        public int CantidadCitas { get => _cantidadCitas; set => _cantidadCitas = value; }
     }
 }

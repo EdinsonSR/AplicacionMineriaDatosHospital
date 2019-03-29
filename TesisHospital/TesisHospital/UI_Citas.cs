@@ -63,6 +63,18 @@ namespace TesisHospital
                 row.Cells[0].Value = oCita.HoraCita;
                 row.Cells[1].Value = oCita.NombrePaciente;
                 row.Cells[2].Value = oCita.AtendidaCit;
+
+                if (oCita.AtendidaCit == 0)
+                {
+                    row.Cells[2].Value = "NO ATENDIDO";
+                    row.Cells[3].ReadOnly = false;
+                }
+                else
+                {
+                    row.Cells[2].Value = "ATENDIDO";
+                    row.Cells[3].Value = true;
+                }
+                
                 this.dgvCitas.Rows.Add(row);
             }
         }
@@ -111,6 +123,56 @@ namespace TesisHospital
             VariablesGlobales.especialidadMedicoCita = this.cbxEspecialidadMedico.Text.Trim();
 
             llenarTablaCitas();
+        }
+
+        private void dgvCitas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            DataGridView dgv = sender as DataGridView;
+            if (dgv.Columns[e.ColumnIndex].Name == "estadoCita")
+            {
+                if (e.Value.ToString().Contains("NO ATENDIDO"))
+                {
+                    e.CellStyle.ForeColor = Color.Red;
+                   
+                }
+                else if (e.Value.ToString().Contains("ATENDIDO"))
+                {
+                    e.CellStyle.ForeColor = Color.Green;
+                }
+            }
+        }
+        public void EliminarCita()
+        {
+            try
+            {
+                Cita oCita = new Cita();
+                //oCita.IdCita = oCita.IdCita;
+                oCita.FechaCita =Convert.ToDateTime(this.dtpFechaCita.Text);
+                //oCita.AtendidaCit = 0;
+                oCita.HoraCita = VariablesGlobales.horaCita;
+                //oCita.MedicoCita = VariablesGlobales.nombreMedico;
+                //oCita.EspecialidadCita = VariablesGlobales.especialidadMedicoCita;
+                oCita.NombrePaciente = VariablesGlobales.apellidoPaternoPaciente + ' ' + VariablesGlobales.apellidoMaternoPaciente + ' ' + VariablesGlobales.nombrePaciente;
+
+                Boolean eliminar = CitasBLL.Instancia.eliminarCita(oCita);
+
+                MessageBox.Show("Registro Eliminado con Exito!","", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                this.DialogResult = DialogResult.OK;
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo realizar la operacion:" + ex.Message, "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                throw ex;
+            }
+        }
+        private void dgvCitas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.dgvCitas.Columns[e.ColumnIndex].Name == "eliminarCita")
+            {
+                //EliminarCita();
+                //dgvCitas.Rows.Remove(dgvCitas.CurrentRow);
+            }
         }
     }
 }

@@ -50,6 +50,7 @@
     <Compile Include="GuiaMedicamentoBLL.cs" />
     <Compile Include="MedicamentosBLL.cs" />
     <Compile Include="MedicoBLL.cs" />
+    <Compile Include="PatronesBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
