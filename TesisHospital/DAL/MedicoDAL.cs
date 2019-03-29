@@ -11,7 +11,7 @@ namespace DAL
 {
 	public class MedicoDAL
 	{
-		public Boolean InsertarMedico (HorariosMedicos oMedico)
+		public Boolean InsertarMedico(HorariosMedicos oMedico)
 		{
 			SqlConnection _conexion = new SqlConnection(Conexion.cadenaConexion);
 			SqlCommand _comando = new SqlCommand("PA_Medico", _conexion) { CommandType = CommandType.StoredProcedure };
@@ -22,8 +22,8 @@ namespace DAL
 			_comando.Parameters.AddWithValue("@PaternoMed", SqlDbType.VarChar).Value = oMedico.PaternoMed;
 			_comando.Parameters.AddWithValue("@MaternoMed", SqlDbType.VarChar).Value = oMedico.MaternoMed;
 			_comando.Parameters.AddWithValue("@consultorioMed", SqlDbType.VarChar).Value = oMedico.Consultorio;
-			_comando.Parameters.AddWithValue("@fechaInicio", SqlDbType.VarChar).Value = oMedico.FechaInicio;
-			_comando.Parameters.AddWithValue("@fechaFin", SqlDbType.VarChar).Value = oMedico.FechaFin;
+			_comando.Parameters.AddWithValue("@fechaInicio", SqlDbType.Date).Value = oMedico.FechaInicio;
+			_comando.Parameters.AddWithValue("@fechaFin", SqlDbType.Date).Value = oMedico.FechaFin;
 			_comando.Parameters.AddWithValue("@horaInicio", SqlDbType.VarChar).Value = oMedico.HoraInicio;
 			_comando.Parameters.AddWithValue("@horaFin", SqlDbType.VarChar).Value = oMedico.HoraFin;
 			_comando.Parameters.AddWithValue("@fechaRegistro", SqlDbType.VarChar).Value = oMedico.Fecharegistro;
@@ -72,8 +72,8 @@ namespace DAL
 					oMedico.PaternoMed = dr["PaternoMed"].ToString();
 					oMedico.MaternoMed = dr["MaternoMed"].ToString();
 					oMedico.Consultorio = dr["consultorioMed"].ToString();
-					oMedico.FechaInicio = dr["fechaInicio"].ToString();
-					oMedico.FechaFin = dr["fechaFin"].ToString();
+					oMedico.FechaInicio = Convert.ToDateTime(dr["fechaInicio"].ToString());
+					oMedico.FechaFin = Convert.ToDateTime(dr["fechaFin"].ToString());
 					oMedico.HoraInicio = dr["horaInicio"].ToString();
 					oMedico.HoraFin = dr["horaFin"].ToString();
 					lista.Add(oMedico);
@@ -113,8 +113,8 @@ namespace DAL
 					oMedico.PaternoMed = dr["PaternoMed"].ToString();
 					oMedico.MaternoMed = dr["MaternoMed"].ToString();
 					oMedico.Consultorio = dr["consultorioMed"].ToString();
-					oMedico.FechaInicio = dr["fechaInicio"].ToString();
-					oMedico.FechaFin = dr["fechaFin"].ToString();
+					oMedico.FechaInicio = Convert.ToDateTime(dr["fechaInicio"].ToString());
+					oMedico.FechaFin = Convert.ToDateTime(dr["fechaFin"].ToString());
 					oMedico.HoraInicio = dr["horaInicio"].ToString();
 					oMedico.HoraFin = dr["horaFin"].ToString();
 					lista.Add(oMedico);
@@ -152,8 +152,8 @@ namespace DAL
 					oMedico.MedEspecialidad = dr["medEspecialidad"].ToString();
 					oMedico.Nombre = dr["Nombre"].ToString();
 					oMedico.Consultorio = dr["consultorioMed"].ToString();
-					oMedico.FechaInicio = dr["fechaInicio"].ToString();
-					oMedico.FechaFin = dr["fechaFin"].ToString();
+					oMedico.FechaInicio = Convert.ToDateTime(dr["fechaInicio"].ToString());
+					oMedico.FechaFin = Convert.ToDateTime(dr["fechaFin"].ToString());
 					oMedico.HoraInicio = dr["horaInicio"].ToString();
 					oMedico.HoraFin = dr["horaFin"].ToString();
 					lista.Add(oMedico);
@@ -241,11 +241,12 @@ namespace DAL
             return exito;
         }
 
-        public List<Medico> ListarNombreMedicoPorEspecialidad(string especialidad)
+        public List<Medico> ListarNombreMedicoPorEspecialidadYFecha(string especialidad, DateTime fechaCita)
         {
             SqlConnection _conexion = new SqlConnection(Conexion.cadenaConexion);
             SqlCommand _comando = new SqlCommand("PA_Medico", _conexion) { CommandType = CommandType.StoredProcedure };
             _comando.Parameters.AddWithValue("@medEspecialidad", SqlDbType.VarChar).Value = especialidad;
+            _comando.Parameters.AddWithValue("@fechaCita", SqlDbType.VarChar).Value = fechaCita;
             _comando.Parameters.AddWithValue("tipo", SqlDbType.TinyInt).Value = 7;
             Medico oMedico = null;
             List<Medico> lista = new List<Medico>();
@@ -272,6 +273,39 @@ namespace DAL
                 _conexion.Close();
             }
             return lista;
+        }
+
+        public HorariosMedicos busquedaHorariosMedicosCitas(DateTime fechaCita, string nombreMedico)
+        {
+            SqlConnection _conexion = new SqlConnection(Conexion.cadenaConexion);
+            SqlCommand _comando = new SqlCommand("PA_Medico", _conexion) { CommandType = CommandType.StoredProcedure };
+            _comando.Parameters.AddWithValue("@fechaCita", SqlDbType.Date).Value = fechaCita;
+            _comando.Parameters.AddWithValue("@nombreCompleto", SqlDbType.VarChar).Value = nombreMedico;
+            _comando.Parameters.AddWithValue("@tipo", SqlDbType.TinyInt).Value = 8;
+            HorariosMedicos oMedico = null;
+            try
+            {
+                if (_conexion.State == ConnectionState.Closed)
+                {
+                    _conexion.Open();
+                }
+                SqlDataReader dr = _comando.ExecuteReader();
+                if (dr.Read())
+                {
+                    oMedico = new HorariosMedicos();
+                    oMedico.HoraInicialMedico = dr["horaInicio"].ToString();
+                    oMedico.HoraFinalMedico = dr["horaFin"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                _conexion.Close();
+            }
+            return oMedico;
         }
     }
 }

@@ -17,5 +17,12 @@ namespace TesisHospital
         public static string rucProveedor;
         public static string razonSocial;
         public static string direccionProvedor;
+
+        /*CITA*/
+        public static DateTime fechaCita;
+        public static string nombreMedico;
+        public static string especialidadMedicoCita;
+
+        
     }
 }

@@ -9,3 +9,14 @@ C:\Users\edins\source\repos\TesisHospital\BLL\obj\Debug\BLL.csproj.CoreCompileIn
 C:\Users\edins\source\repos\TesisHospital\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\edins\source\repos\TesisHospital\BLL\obj\Debug\BLL.dll
 C:\Users\edins\source\repos\TesisHospital\BLL\obj\Debug\BLL.pdb
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\BLL\bin\Debug\BLL.dll
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\BLL\bin\Debug\BLL.pdb
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\BLL\bin\Debug\DAL.dll
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\BLL\bin\Debug\EL.dll
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\BLL\bin\Debug\DAL.pdb
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\BLL\bin\Debug\EL.pdb
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\BLL\obj\Debug\BLL.dll
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\BLL\obj\Debug\BLL.pdb

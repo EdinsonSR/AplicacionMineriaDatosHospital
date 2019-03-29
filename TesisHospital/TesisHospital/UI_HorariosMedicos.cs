@@ -117,8 +117,8 @@ namespace TesisHospital
 			oMedico.PaternoMed = this.txtPaternoMed.Text.Trim();
 			oMedico.MaternoMed = this.txtMaternoMed.Text.Trim();
 			oMedico.Consultorio = this.cbxConsultorio.Text.Trim();
-			oMedico.FechaInicio = this.dtFechaInicio.Text.Trim();
-			oMedico.FechaFin = this.dtFechaFinal.Text.Trim();
+			oMedico.FechaInicio = Convert.ToDateTime(this.dtFechaInicio.Text.Trim());
+			oMedico.FechaFin = Convert.ToDateTime(this.dtFechaFinal.Text.Trim());
 			oMedico.HoraInicio = this.dtpHoraInicio.Text.Trim();
 			oMedico.HoraFin = this.dtpHoraFinal.Text.Trim();
 			oMedico.Fecharegistro = DateTime.Now;

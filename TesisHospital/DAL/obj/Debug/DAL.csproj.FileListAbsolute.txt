@@ -7,3 +7,12 @@ C:\Users\edins\source\repos\TesisHospital\DAL\obj\Debug\DAL.csproj.CoreCompileIn
 C:\Users\edins\source\repos\TesisHospital\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\edins\source\repos\TesisHospital\DAL\obj\Debug\DAL.dll
 C:\Users\edins\source\repos\TesisHospital\DAL\obj\Debug\DAL.pdb
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\DAL\bin\Debug\DAL.dll
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\DAL\bin\Debug\DAL.pdb
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\DAL\bin\Debug\EL.dll
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\DAL\bin\Debug\EL.pdb
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\DAL\obj\Debug\DAL.dll
+C:\Users\edins\source\repos\AplicacionMineriaDatosHospital\TesisHospital\DAL\obj\Debug\DAL.pdb

@@ -19,14 +19,17 @@ namespace EL
 		private string _paternoMed;
 		private string _maternoMed;
 		private string _consultorio;
-		private string _fechaInicio;
-		private string _fechaFin;
+		private DateTime _fechaInicio;
+		private DateTime _fechaFin;
 		private string _horaInicio;
 		private string _horaFin;
 		private DateTime _fecharegistro;
 
+        /**/
+        private string _horaInicialMedico;
+        private string _horaFinalMedico;
 
-		public int IdMedico { get => _idMedico; set => _idMedico = value; }
+        public int IdMedico { get => _idMedico; set => _idMedico = value; }
 		public int MedCod { get => _medCod; set => _medCod = value; }
 		public string NombreMedico { get => _nombreMedico; set => _nombreMedico = value; }
 		public string MedCol { get => _medCol; set => _medCol = value; }
@@ -36,11 +39,13 @@ namespace EL
 		public string PaternoMed { get => _paternoMed; set => _paternoMed = value; }
 		public string MaternoMed { get => _maternoMed; set => _maternoMed = value; }
 		public string Consultorio { get => _consultorio; set => _consultorio = value; }
-		public string FechaInicio { get => _fechaInicio; set => _fechaInicio = value; }
-		public string FechaFin { get => _fechaFin; set => _fechaFin = value; }
+		public DateTime FechaInicio { get => _fechaInicio; set => _fechaInicio = value; }
+		public DateTime FechaFin { get => _fechaFin; set => _fechaFin = value; }
 		public string HoraInicio { get => _horaInicio; set => _horaInicio = value; }
 		public string HoraFin { get => _horaFin; set => _horaFin = value; }
 		public DateTime Fecharegistro { get => _fecharegistro; set => _fecharegistro = value; }
 		public string Nombre { get => _nombre; set => _nombre = value; }
-	}
+        public string HoraInicialMedico { get => _horaInicialMedico; set => _horaInicialMedico = value; }
+        public string HoraFinalMedico { get => _horaFinalMedico; set => _horaFinalMedico = value; }
+    }
 }

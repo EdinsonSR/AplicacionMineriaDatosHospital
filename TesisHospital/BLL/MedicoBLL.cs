@@ -116,11 +116,11 @@ namespace BLL
             }
         }
 
-        public List<Medico> ListarNombreMedicoPorEspecialidad(string especialidad)
+        public List<Medico> ListarNombreMedicoPorEspecialidadYFecha(string especialidad, DateTime fechaCita)
         {
             try
             {
-                return oMedicoDAL.ListarNombreMedicoPorEspecialidad(especialidad);
+                return oMedicoDAL.ListarNombreMedicoPorEspecialidadYFecha(especialidad, fechaCita);
             }
             catch (Exception ex)
             {
@@ -128,5 +128,16 @@ namespace BLL
             }
         }
 
+        public HorariosMedicos busquedaHorariosMedicosCitas(DateTime fechaCita, string nombreMedico)
+        {
+            try
+            {
+                return oMedicoDAL.busquedaHorariosMedicosCitas(fechaCita, nombreMedico);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AreasEspecialidadesBLL.cs" />
+    <Compile Include="CitasBLL.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="ConsultaProveedorBLL.cs" />
     <Compile Include="ConsultorioBLL.cs" />

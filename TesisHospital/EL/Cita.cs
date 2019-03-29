@@ -10,18 +10,21 @@ namespace EL
 	{
 		private int _idCita;
 		private DateTime _fechaCita;
-		private string _paternoPacCit;
-		private string _maternoPacCit;
-		private string _nombresPacCit;
-		private string _medicoCit;
-		private int _atendidaCit;
+        private int _atendidaCit;
+        private string horaCita;
+        private string medicoCita;
+        private string especialidadCita;
+        private string nombrePaciente;
 
-		public int IdCita { get => _idCita; set => _idCita = value; }
+        /**/
+
+
+        public int IdCita { get => _idCita; set => _idCita = value; }
 		public DateTime FechaCita { get => _fechaCita; set => _fechaCita = value; }
-		public string PaternoPacCit { get => _paternoPacCit; set => _paternoPacCit = value; }
-		public string MaternoPacCit { get => _maternoPacCit; set => _maternoPacCit = value; }
-		public string NombresPacCit { get => _nombresPacCit; set => _nombresPacCit = value; }
-		public string MedicoCit { get => _medicoCit; set => _medicoCit = value; }
-		public int AtendidaCit { get => _atendidaCit; set => _atendidaCit = value; }
-	}
+        public int AtendidaCit { get => _atendidaCit; set => _atendidaCit = value; }
+        public string HoraCita { get => horaCita; set => horaCita = value; }
+        public string MedicoCita { get => medicoCita; set => medicoCita = value; }
+        public string EspecialidadCita { get => especialidadCita; set => especialidadCita = value; }
+        public string NombrePaciente { get => nombrePaciente; set => nombrePaciente = value; }
+    }
 }

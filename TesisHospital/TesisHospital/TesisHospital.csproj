@@ -121,6 +121,12 @@
     <Compile Include="UI_Patrones.Designer.cs">
       <DependentUpon>UI_Patrones.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI_RegistrarCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_RegistrarCita.Designer.cs">
+      <DependentUpon>UI_RegistrarCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI_RegistroGuias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI_Patrones.resx">
       <DependentUpon>UI_Patrones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_RegistrarCita.resx">
+      <DependentUpon>UI_RegistrarCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI_RegistroGuias.resx">
       <DependentUpon>UI_RegistroGuias.cs</DependentUpon>

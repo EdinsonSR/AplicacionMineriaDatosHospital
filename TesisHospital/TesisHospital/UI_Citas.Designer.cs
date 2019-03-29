@@ -29,27 +29,41 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UI_Citas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tspGuardarCitas = new System.Windows.Forms.ToolStripButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
-            this.cbxEspecialidadMedico = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvMedicamentosGuia = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbxMedico = new System.Windows.Forms.ComboBox();
             this.btnlogoInicio = new System.Windows.Forms.PictureBox();
-            this.itemGuiaMedicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbxMedico = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbxEspecialidadMedico = new System.Windows.Forms.ComboBox();
+            this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
+            this.dgvCitas = new System.Windows.Forms.DataGridView();
             this.horaCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pacienteCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eliminarCita = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnAbrirFormRegistrarCita = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtHoraInicial = new System.Windows.Forms.TextBox();
+            this.txtHoraFinal = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentosGuia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnlogoInicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -77,6 +91,7 @@
             this.tspGuardarCitas.Name = "tspGuardarCitas";
             this.tspGuardarCitas.Size = new System.Drawing.Size(40, 40);
             this.tspGuardarCitas.Text = "Guardar";
+            this.tspGuardarCitas.Click += new System.EventHandler(this.tspGuardarCitas_Click);
             // 
             // label2
             // 
@@ -98,20 +113,56 @@
             this.panel1.Controls.Add(this.cbxEspecialidadMedico);
             this.panel1.Controls.Add(this.dtpFechaCita);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 52);
+            this.panel1.Location = new System.Drawing.Point(12, 51);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(252, 514);
+            this.panel1.Size = new System.Drawing.Size(252, 515);
             this.panel1.TabIndex = 12;
             // 
-            // dtpFechaCita
+            // btnlogoInicio
             // 
-            this.dtpFechaCita.CalendarFont = new System.Drawing.Font("Bahnschrift Light", 9.75F);
-            this.dtpFechaCita.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
-            this.dtpFechaCita.Location = new System.Drawing.Point(6, 95);
-            this.dtpFechaCita.Name = "dtpFechaCita";
-            this.dtpFechaCita.Size = new System.Drawing.Size(237, 23);
-            this.dtpFechaCita.TabIndex = 12;
-            this.dtpFechaCita.Value = new System.DateTime(2019, 3, 21, 20, 56, 0, 0);
+            this.btnlogoInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlogoInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnlogoInicio.Image")));
+            this.btnlogoInicio.Location = new System.Drawing.Point(1, 438);
+            this.btnlogoInicio.Margin = new System.Windows.Forms.Padding(0);
+            this.btnlogoInicio.Name = "btnlogoInicio";
+            this.btnlogoInicio.Size = new System.Drawing.Size(250, 73);
+            this.btnlogoInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnlogoInicio.TabIndex = 17;
+            this.btnlogoInicio.TabStop = false;
+            // 
+            // cbxMedico
+            // 
+            this.cbxMedico.BackColor = System.Drawing.SystemColors.Window;
+            this.cbxMedico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxMedico.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.cbxMedico.FormattingEnabled = true;
+            this.cbxMedico.Location = new System.Drawing.Point(6, 169);
+            this.cbxMedico.Name = "cbxMedico";
+            this.cbxMedico.Size = new System.Drawing.Size(237, 24);
+            this.cbxMedico.TabIndex = 16;
+            this.cbxMedico.SelectedIndexChanged += new System.EventHandler(this.cbxMedico_SelectedIndexChanged);
+            this.cbxMedico.ValueMemberChanged += new System.EventHandler(this.cbxMedico_ValueMemberChanged);
+            this.cbxMedico.SelectedValueChanged += new System.EventHandler(this.cbxMedico_SelectedValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.label3.Location = new System.Drawing.Point(6, 150);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 16);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Médico";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.label1.Location = new System.Drawing.Point(6, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Fecha:";
             // 
             // cbxEspecialidadMedico
             // 
@@ -126,109 +177,187 @@
             this.cbxEspecialidadMedico.Size = new System.Drawing.Size(237, 24);
             this.cbxEspecialidadMedico.TabIndex = 13;
             // 
-            // label1
+            // dtpFechaCita
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
-            this.label1.Location = new System.Drawing.Point(6, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 16);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Fecha:";
+            this.dtpFechaCita.CalendarFont = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.dtpFechaCita.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.dtpFechaCita.Location = new System.Drawing.Point(6, 95);
+            this.dtpFechaCita.Name = "dtpFechaCita";
+            this.dtpFechaCita.Size = new System.Drawing.Size(237, 23);
+            this.dtpFechaCita.TabIndex = 12;
+            this.dtpFechaCita.Value = new System.DateTime(2019, 3, 21, 20, 56, 0, 0);
+            this.dtpFechaCita.ValueChanged += new System.EventHandler(this.dtpFechaCita_ValueChanged);
             // 
-            // dgvMedicamentosGuia
+            // dgvCitas
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMedicamentosGuia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvMedicamentosGuia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMedicamentosGuia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.itemGuiaMedicamento,
+            this.dgvCitas.AllowUserToAddRows = false;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.dgvCitas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            this.dgvCitas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.horaCita,
             this.pacienteCita,
-            this.estadoCita});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift Light", 9F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMedicamentosGuia.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvMedicamentosGuia.Location = new System.Drawing.Point(270, 52);
-            this.dgvMedicamentosGuia.Name = "dgvMedicamentosGuia";
-            this.dgvMedicamentosGuia.RowHeadersVisible = false;
-            this.dgvMedicamentosGuia.Size = new System.Drawing.Size(676, 514);
-            this.dgvMedicamentosGuia.TabIndex = 13;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
-            this.label3.Location = new System.Drawing.Point(6, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 16);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Médico";
-            // 
-            // cbxMedico
-            // 
-            this.cbxMedico.BackColor = System.Drawing.SystemColors.Window;
-            this.cbxMedico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxMedico.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
-            this.cbxMedico.FormattingEnabled = true;
-            this.cbxMedico.Location = new System.Drawing.Point(6, 169);
-            this.cbxMedico.Name = "cbxMedico";
-            this.cbxMedico.Size = new System.Drawing.Size(237, 24);
-            this.cbxMedico.TabIndex = 16;
-            // 
-            // btnlogoInicio
-            // 
-            this.btnlogoInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnlogoInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnlogoInicio.Image")));
-            this.btnlogoInicio.Location = new System.Drawing.Point(1, 438);
-            this.btnlogoInicio.Margin = new System.Windows.Forms.Padding(0);
-            this.btnlogoInicio.Name = "btnlogoInicio";
-            this.btnlogoInicio.Size = new System.Drawing.Size(250, 73);
-            this.btnlogoInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnlogoInicio.TabIndex = 17;
-            this.btnlogoInicio.TabStop = false;
-            // 
-            // itemGuiaMedicamento
-            // 
-            this.itemGuiaMedicamento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.itemGuiaMedicamento.HeaderText = "Item";
-            this.itemGuiaMedicamento.Name = "itemGuiaMedicamento";
-            this.itemGuiaMedicamento.Width = 50;
+            this.estadoCita,
+            this.eliminarCita});
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Bahnschrift Light", 9F);
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCitas.DefaultCellStyle = dataGridViewCellStyle22;
+            this.dgvCitas.Location = new System.Drawing.Point(270, 85);
+            this.dgvCitas.Name = "dgvCitas";
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            this.dgvCitas.RowHeadersVisible = false;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.dgvCitas.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            this.dgvCitas.Size = new System.Drawing.Size(676, 481);
+            this.dgvCitas.TabIndex = 13;
             // 
             // horaCita
             // 
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.horaCita.DefaultCellStyle = dataGridViewCellStyle19;
+            this.horaCita.Frozen = true;
             this.horaCita.HeaderText = "Hora";
             this.horaCita.Name = "horaCita";
             // 
             // pacienteCita
             // 
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.pacienteCita.DefaultCellStyle = dataGridViewCellStyle20;
+            this.pacienteCita.Frozen = true;
             this.pacienteCita.HeaderText = "Paciente";
             this.pacienteCita.Name = "pacienteCita";
             this.pacienteCita.Width = 300;
             // 
             // estadoCita
             // 
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.estadoCita.DefaultCellStyle = dataGridViewCellStyle21;
+            this.estadoCita.Frozen = true;
             this.estadoCita.HeaderText = "Estado";
             this.estadoCita.Name = "estadoCita";
             this.estadoCita.Width = 150;
+            // 
+            // eliminarCita
+            // 
+            this.eliminarCita.Frozen = true;
+            this.eliminarCita.HeaderText = "Eliminar";
+            this.eliminarCita.Image = ((System.Drawing.Image)(resources.GetObject("eliminarCita.Image")));
+            this.eliminarCita.Name = "eliminarCita";
+            this.eliminarCita.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.eliminarCita.Width = 60;
+            // 
+            // btnAbrirFormRegistrarCita
+            // 
+            this.btnAbrirFormRegistrarCita.BackColor = System.Drawing.Color.Teal;
+            this.btnAbrirFormRegistrarCita.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbrirFormRegistrarCita.FlatAppearance.BorderSize = 0;
+            this.btnAbrirFormRegistrarCita.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkCyan;
+            this.btnAbrirFormRegistrarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbrirFormRegistrarCita.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbrirFormRegistrarCita.ForeColor = System.Drawing.Color.White;
+            this.btnAbrirFormRegistrarCita.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrirFormRegistrarCita.Image")));
+            this.btnAbrirFormRegistrarCita.Location = new System.Drawing.Point(865, 52);
+            this.btnAbrirFormRegistrarCita.Name = "btnAbrirFormRegistrarCita";
+            this.btnAbrirFormRegistrarCita.Size = new System.Drawing.Size(81, 29);
+            this.btnAbrirFormRegistrarCita.TabIndex = 14;
+            this.btnAbrirFormRegistrarCita.Text = " Agregar";
+            this.btnAbrirFormRegistrarCita.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAbrirFormRegistrarCita.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAbrirFormRegistrarCita.UseVisualStyleBackColor = false;
+            this.btnAbrirFormRegistrarCita.Click += new System.EventHandler(this.btnAbrirFormRegistrarCita_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.label4.Location = new System.Drawing.Point(258, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 16);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Hora Inicial:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.label5.Location = new System.Drawing.Point(428, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 16);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Hora Final:";
+            // 
+            // txtHoraInicial
+            // 
+            this.txtHoraInicial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtHoraInicial.Enabled = false;
+            this.txtHoraInicial.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.txtHoraInicial.Location = new System.Drawing.Point(340, 3);
+            this.txtHoraInicial.Name = "txtHoraInicial";
+            this.txtHoraInicial.Size = new System.Drawing.Size(64, 23);
+            this.txtHoraInicial.TabIndex = 17;
+            // 
+            // txtHoraFinal
+            // 
+            this.txtHoraFinal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtHoraFinal.Enabled = false;
+            this.txtHoraFinal.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.txtHoraFinal.Location = new System.Drawing.Point(504, 3);
+            this.txtHoraFinal.Name = "txtHoraFinal";
+            this.txtHoraFinal.Size = new System.Drawing.Size(64, 23);
+            this.txtHoraFinal.TabIndex = 18;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.txtHoraInicial);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.txtHoraFinal);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Location = new System.Drawing.Point(270, 51);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(580, 30);
+            this.panel2.TabIndex = 20;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift Light", 9.75F);
+            this.label6.Location = new System.Drawing.Point(3, 7);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(234, 16);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "HORARIO DEL MEDICO SELECCIONADO:";
             // 
             // UI_Citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 573);
-            this.Controls.Add(this.dgvMedicamentosGuia);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnAbrirFormRegistrarCita);
+            this.Controls.Add(this.dgvCitas);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -239,8 +368,10 @@
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentosGuia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnlogoInicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -256,11 +387,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxMedico;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dgvMedicamentosGuia;
+        private System.Windows.Forms.DataGridView dgvCitas;
         private System.Windows.Forms.PictureBox btnlogoInicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn itemGuiaMedicamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn horaCita;
         private System.Windows.Forms.DataGridViewTextBoxColumn pacienteCita;
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoCita;
+        private System.Windows.Forms.DataGridViewImageColumn eliminarCita;
+        private System.Windows.Forms.Button btnAbrirFormRegistrarCita;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtHoraInicial;
+        private System.Windows.Forms.TextBox txtHoraFinal;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label6;
     }
 }
